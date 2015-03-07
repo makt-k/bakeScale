@@ -1,0 +1,67 @@
+.receipe-form {
+  padding:20px;
+}
+
+input.form-control {
+  margin: 10px;
+  min-width: 400px;
+  line-height: 25px;
+}
+
+
+input.receipeName {
+  min-width: 720px;
+}
+
+.instructions {
+  min-width: 835px;
+  margin-bottom: 10px;
+}
+
+.instructionsOutput{
+  min-width: 835px;
+  margin-bottom: 10px;
+  border: none;
+  padding-left: 20px;
+}
+
+.non-formLabel {
+  padding-left: 20px;
+}
+
+.receipeName {
+  color: #5C4033;
+  font-family:Helvetica, Arial, sans-serif;
+}
+
+.singleIngredient .singleMeasurement{
+  color: #5C4033;
+  font-family:Helvetica, Arial, sans-serif;
+}
+
+button {
+  padding: 10px;
+}
+
+label {
+  padding-bottom: 5px;
+  font-size: 14px;
+  font-family:Helvetica, Arial, sans-serif;
+}
+
+table.ingredientsList {
+  width:835px;
+  margin:20px;
+  tbody tr td {
+    height: 25px;
+  }
+}
+
+.previewContainer {
+  border: 1px solid #e3e3e3;
+  padding: 20px;
+}
+
+.subTitle {
+  margin-left:20px;
+}
