@@ -1,0 +1,36 @@
+
+
+  <div ng-controller='receipeController'>
+    <form novalidate class="receipe-form form-inline">
+     <label for='receipeName'> Receipe Name: </label>
+     <input type="text" class="form-control receipeName" ng-model="receipe.name" /><br />
+     <label for="ingredient">Ingredients: </label><br/>
+     <div class="form-group" data-ng-repeat="ingredient in receipe.ingredients">
+       <input type="text" class="ingredientInput form-control" ng-model="ingredient.name" name="" placeholder="Enter an ingredient">
+       <input type="text" class="measurementInput form-control" ng-model='ingredient.measurement' placeholder='Enter a measurement'>
+       <button ng-show="$last" ng-click="addNewIngredient()" class="btn btn-default">Add another ingredient</button>
+       <br />
+     </div>
+     <br />
+     <label for='instructions'>Instructions: </label> <br/>
+     <textarea class="form-control instructions" rows='5' ng-model="receipt.instructions"></textarea><br/>
+     <input type="submit" ng-click="update(receipe)" class="btn btn-default" value="Save" />
+   </form>
+   <div class="previewContainer">
+   <h4 class="subTitle">Preview</h4>
+    <h3 class="receipeName subTitle">{{receipe.name}}</h3>
+    <table class="ingredientsList table table-striped table-bordered">
+      <thead>
+        <th>Ingredient</th>
+        <th>Measurement</th>
+      </thead>
+      <tr data-ng-repeat="ingredient in receipe.ingredients">
+        <td class="singleIngredient">{{ingredient.name}}</td>
+        <td class="singleMeasure">{{ingredient.measurement}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <label for='instructions' class="non-formLabel">Instructions: </label> <br/>
+  <textarea class="instructionsOutput" rows='5'>{{receipt.instructions}}</textarea>
+</div>
+

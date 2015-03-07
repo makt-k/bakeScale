@@ -8,7 +8,7 @@ module.exports = function () {
   var watch = {};
 
   watch.html = gulp.watch('public/src/*.html', ['markup']);
-  watch.templates = gulp.watch('public/src/partials/**/*.html', ['templateCache']);
+  watch.templates = gulp.watch('public/src/templates/**/*.html');
   watch.markdown = gulp.watch('*.md', ['markdown']);
   watch.styles = gulp.watch('public/src/scss/**/*.scss', ['styles']);
   watch.scripts = gulp.watch('public/src/**/*', ['scripts']);

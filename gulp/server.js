@@ -5,7 +5,7 @@ var tinylr      = require('tiny-lr');
 
 var config = {
   lrport : Math.floor(Math.random() * (700) + 35300),
-  serverport : 4001
+  serverport : 8009
 };
 
 var server = express();

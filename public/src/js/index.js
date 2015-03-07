@@ -1,9 +1,27 @@
 var angular = require('angular');
 
+var app = angular.module('bakeScale', [require('angular-route')]);
 
-var app = angular.module('bakeScale', []);
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+        $routeProvider.
+        when('/home', {
+            templateUrl: '../templates/home.html',
+            controller: 'homeController'
+        }).
+        when('/new', {
+            templateUrl: '../templates/createReceipe.html',
+            controller: 'receipeController'
+        }).
+        when('/masterlist', {
+          templateUrl: '../templates/masterlist.html',
+          controller: 'masterlistController'
+        }).
+        otherwise({
+            redirectTo: '/home'
+        });
+}]);
 
-app.controller('receipeController', function($scope) {
+app.controller('receipeController', function($scope, $routeParams) {
   $scope.receipe = {};
 
   $scope.receipe.ingredients = [{id: 'ingredient1'}, {id: 'ingredient2'}, {id: 'ingredient3'}, {id: 'ingredient4'}, {id: 'ingredient5'}];
@@ -18,3 +36,12 @@ app.controller('receipeController', function($scope) {
   };
 
 });
+
+app.controller('masterlistController', function($scope, $routeParams) {
+
+
+});
+
+app.controller('homeController', function($scope, $routeParams){
+
+})
