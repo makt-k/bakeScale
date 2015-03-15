@@ -1,14 +1,18 @@
-.receipe-form {
+.recipe-form {
   padding:20px;
 }
 
-input.form-control {
+input.ingredientInput {
   margin: 10px;
   min-width: 400px;
   line-height: 25px;
 }
 
-input.receipeName {
+input.measurementInput {
+  min-width:200px;
+}
+
+input.recipeName {
   min-width: 720px;
 }
 
@@ -65,6 +69,10 @@ div#navbar {
   padding: 20px;
 }
 
+.listContainer {
+  padding-left: 20px;
+}
+
 .subTitle {
   margin-left:20px;
 }
@@ -88,3 +96,12 @@ nav.navbar-default {
   height:700px;
 }
 
+div.margins {
+  margin: 20px;
+}
+
+p.recipeTitle {
+  font-family:Helvetica, Arial, sans-serif;
+  color: #5C4033;
+  font-size: 14px;
+}

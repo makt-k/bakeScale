@@ -12,7 +12,7 @@ module.exports = function () {
         return b.bundle();
     });
 
-    return gulp.src(['./public/src/js/*.js'])
+    return gulp.src(['./public/src/js/**/*.js'])
         .pipe(browserified)
         .pipe(gulp.dest('./public/dist/js'));
 };
